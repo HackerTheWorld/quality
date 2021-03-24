@@ -19,8 +19,7 @@ public class QualityFilter implements FilterFunction<Row>{
             return false;
         }
         String paramGroupNameStr = String.valueOf(raw.getField(8)).trim();
-        boolean paramGroupName = ("400T_WJ".equals(paramGroupNameStr) || "UA3P_KanHe".equals(paramGroupNameStr)
-                || "UA3P_MianXing".equals(paramGroupNameStr) || "xls_SanZuoBiaoFile".equals(paramGroupNameStr));
+        boolean paramGroupName = true;
         return !zero.equals(lensType) || !paramGroupName;
     }
     

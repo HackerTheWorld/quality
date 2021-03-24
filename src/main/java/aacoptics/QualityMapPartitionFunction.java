@@ -16,7 +16,7 @@ public class QualityMapPartitionFunction implements MapPartitionFunction<RedisDa
 
     @Override
     public void mapPartition(Iterable<RedisDataVo> values, Collector<RedisDataVo> out) throws Exception {
-         try(Jedis jedis = new Jedis("10.233.32.21",30000)){
+         try(Jedis jedis = new Jedis("XXXXXX",30000)){
             jedis.select(1);
             Iterator<RedisDataVo> iterator = values.iterator();
             while(iterator.hasNext()){
